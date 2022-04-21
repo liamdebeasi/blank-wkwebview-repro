@@ -22,7 +22,19 @@ class ViewController: UIViewController, WKNavigationDelegate {
         
         
         // Load a page from an HTML string
-        webView.loadHTMLString("<html><body>Hello World</body></html>", baseURL: nil)
+        webView.loadHTMLString("""
+    <!DOCTYPE html>
+    <html lang="en" dir="ltr">
+    <head>
+      <meta charset="UTF-8">
+      <title>Blank WKWebView</title>
+      <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    </head>
+    <body>
+      Hello World!
+    </body>
+    </html>
+""", baseURL: nil)
         
         // You can load a webview via URL
         //let url = URL(string: "https://ionic.io")!
