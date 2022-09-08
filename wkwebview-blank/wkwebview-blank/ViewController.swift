@@ -24,16 +24,30 @@ class ViewController: UIViewController, WKNavigationDelegate {
         // Load a page from an HTML string
         webView.loadHTMLString("""
     <!DOCTYPE html>
-    <html lang="en" dir="ltr">
-    <head>
-      <meta charset="UTF-8">
-      <title>Blank WKWebView</title>
-      <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    </head>
-    <body>
-      Hello World!
-    </body>
+    <html lang="en">
+      <head>
+        <meta charset="utf-8" />
+        <title>Capacitor App</title>
+      
+        <base href="/" />
+      
+        <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+        
+        <style>
+          input {
+            font-size: 16px;
+          }
+        </style>
+      </head>
+      
+      <body>
+        <br /><br /><br /><br /><br />
+        <input type="text" placeholder="input" /> <br /><br />
+      
+        <a href="#">Hello World</a>
+      </body>
     </html>
+
 """, baseURL: nil)
         
         // You can load a webview via URL
